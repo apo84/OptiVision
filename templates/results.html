@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prediction Results</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #0b1a34;
+        color: #ffffff;
+        padding: 20px;
+        text-align: center;
+      }
+      h1 {
+        color: #ffffff;
+        font-size: 32px;
+      }
+      table {
+        width: 80%;
+        margin: 0 auto;
+        border-collapse: collapse;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        background-color: rgba(15, 28, 58, 0.8);
+      }
+      table th,
+      table td {
+        padding: 12px 15px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+      table th {
+        background-color: #1c2a48;
+        color: #ffffff;
+        font-size: 18px;
+      }
+      table td {
+        background-color: rgba(28, 30, 34, 0.9);
+      }
+      .highlight {
+        font-weight: bold;
+        color: #27ae60;
+      }
+      .nav-link {
+        text-decoration: none;
+        color: #3498db;
+        font-size: 16px;
+      }
+      .nav-link:hover {
+        color: #ffffff;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Return Home link -->
+    <nav>
+      <a href="/" class="nav-link">Return Home</a>
+    </nav>
+
+    <h1>Prediction Results</h1>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Parameter</th>
+          <th>Values</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Total Number of Buys</td>
+          <td>{{ num_buys }}</td>
+        </tr>
+        <tr>
+          <td>KNN Prediction Count</td>
+          <td>
+            {% for value in knn_pred_count %} {{ value }}<br />
+            {% endfor %}
+          </td>
+        </tr>
+        <tr>
+          <td>KNN Precision Count</td>
+          <td>
+            {% for value in knn_prec_count %} {{ value | round(2) }}%<br />
+            {% endfor %}
+          </td>
+        </tr>
+        <tr>
+          <td>Naive Bayes Prediction Count</td>
+          <td>
+            {% for value in nb_pred_count %} {{ value }}<br />
+            {% endfor %}
+          </td>
+        </tr>
+        <tr>
+          <td>Naive Bayes Precision Count</td>
+          <td>
+            {% for value in nb_prec_count %} {{ value | round(2) }}%<br />
+            {% endfor %}
+          </td>
+        </tr>
+        <tr>
+          <td>SVM Prediction Count</td>
+          <td>
+            {% for value in svm_pred_count %} {{ value }}<br />
+            {% endfor %}
+          </td>
+        </tr>
+        <tr>
+          <td>SVM Precision Count</td>
+          <td>
+            {% for value in svm_prec_count %} {{ value | round(2) }}%<br />
+            {% endfor %}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

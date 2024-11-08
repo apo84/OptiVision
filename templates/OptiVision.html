@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OptiVision - Stock Prediction</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/OptiVision.css') }}"
+    />
+  </head>
+  <body>
+    <!-- Logo and Slogan Section -->
+    <section class="logo-section">
+      <div class="logo-container">
+        <h1 class="main-logo">OptiVision</h1>
+        <p class="slogan">
+          Empowering Your Financial Future, One Insight at a Time.
+        </p>
+      </div>
+    </section>
+
+    <!-- Navigation Bar -->
+    <header>
+      <div class="logo">
+        <h1>OptiVision</h1>
+      </div>
+      <nav>
+        <ul>
+          <li>
+            <a href="javascript:void(0)">Menu</a>
+            <div class="dropdown-content">
+              <a href="#option-investor">OptionInvestor</a>
+              <a href="#option-analyzer">OptionAnalyzer</a>
+              <a href="#about-us">About Us</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- OptionInvestor Section -->
+    <section id="option-investor" class="section-container">
+      <h2 class="section-header">OptionInvestor</h2>
+      <form action="/predict" method="POST">
+        <div class="input-group">
+          <label class="input-label" for="percentIncrease"
+            >Percent Increase</label
+          >
+          <input
+            type="number"
+            id="percentIncrease"
+            name="percentIncrease"
+            class="input-field"
+            placeholder=""
+          />
+        </div>
+
+        <div class="input-group">
+          <label class="input-label" for="timePeriod">Time Period</label>
+          <input
+            type="text"
+            id="timePeriod"
+            name="timePeriod"
+            class="input-field"
+            placeholder=""
+          />
+        </div>
+
+        <div class="input-group">
+          <label class="input-label" for="ticker">Ticker</label>
+          <input
+            type="text"
+            id="ticker"
+            name="ticker"
+            class="input-field"
+            placeholder=""
+          />
+        </div>
+
+        <button type="submit">Predict</button>
+      </form>
+    </section>
+
+    <!-- OptionAnalyzer Section -->
+    <section id="option-analyzer" class="section-container">
+      <h2 class="section-header">OptionAnalyzer</h2>
+      <div class="input-group">
+        <label class="input-label" for="tickerAnalyzer">Ticker</label>
+        <input
+          type="text"
+          id="tickerAnalyzer"
+          class="input-field"
+          placeholder="Enter stock ticker"
+        />
+      </div>
+      <button type="submit">Analyze</button>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about-us" class="section-container">
+      <h2 class="section-header">About Us</h2>
+      <img
+        src="{{ url_for('static', filename='images/aidan.png') }}"
+        alt="OptiVision Logo"
+        class="logo-about"
+      />
+      <p>
+        We are a cutting-edge platform that leverages the power of machine
+        learning to predict changes in stock prices, providing investors with
+        key insights to make profitable trades.
+      </p>
+    </section>
+  </body>
+</html>

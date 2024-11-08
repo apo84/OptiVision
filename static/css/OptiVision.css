@@ -1,0 +1,233 @@
+/* Import Roboto Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* === CSS Variables === */
+:root {
+    --primary-bg-color: #0b1a34; /* Navy blue background */
+    --secondary-bg-color: rgba(15, 28, 58, 0.8); /* Semi-transparent navy for glass effect */
+    --text-color: #ffffff; /* White text color */
+    --accent-color: #ffffff; /* White for accent text */
+    --accent-color-dark: #d4d4d4; /* Light gray for hover effect */
+    --error-color: #e74c3c; /* Red for negative indicators */
+    --border-radius: 12px; /* Softer rounded corners */
+    --shadow-light: 0 2px 15px rgba(0, 0, 0, 0.3);
+    --shadow-medium: 0 4px 12px rgba(0, 0, 0, 0.5);
+    --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.37); /* Glass-like shadow */
+    --font-size-small: 16px;
+    --font-size-medium: 24px;
+    --font-size-large: 32px;
+    --font-size-xlarge: 48px;
+    --backdrop-filter-blur: blur(10px); /* For glass effect */
+}
+
+/* === General Reset === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* === Body Styling === */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background: radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.05), transparent 25%),
+                radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.05), transparent 25%),
+                radial-gradient(circle at 40% 70%, rgba(255, 255, 255, 0.03), transparent 20%),
+                radial-gradient(circle at 60% 30%, rgba(255, 255, 255, 0.03), transparent 20%),
+                var(--primary-bg-color);
+    color: var(--text-color);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* === Logo Section Styling === */
+.logo-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../images/sleekImage.png'); /* Replace with your background image path */
+    background-size: cover;
+    background-position: center;
+    padding: 100px 20px;
+    text-align: center;
+    color: var(--white-color);
+    box-shadow: var(--shadow-medium);
+    width: 100%;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+    background-color: rgba(15, 28, 58, 0.8); /* Semi-transparent background for readability */
+    padding: 40px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-glass);
+}
+
+.main-logo {
+    font-size: 70px;
+    color: var(--accent-color);
+    font-weight: 700;
+    margin-bottom: 10px;
+    margin-top: 50px;
+    text-shadow: 0 4px 8px rgba(255, 255, 255, 0.8); /* White drop shadow */
+}
+
+.slogan {
+    font-size: 20px;
+    color: var(--accent-color-dark);
+    font-weight: 400;
+    margin-bottom: 75px;
+}
+
+/* === Header Styling === */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--secondary-bg-color);
+    padding: 15px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: var(--shadow-light);
+    backdrop-filter: var(--backdrop-filter-blur); /* Glass effect */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo h1 {
+    font-size: var(--font-size-large);
+    color: var(--accent-color);
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.logo h1:hover {
+    color: var(--accent-color-dark);
+}
+
+/* === Navigation Menu Styling === */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--white-color);
+    font-size: var(--font-size-medium);
+    padding: 10px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--accent-color-dark);
+}
+
+/* Dropdown Content Styling */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--secondary-bg-color);
+    box-shadow: var(--shadow-medium);
+    padding: 10px;
+    border-radius: var(--border-radius);
+    min-width: 160px;
+    top: 40px;
+    text-align: left;
+}
+
+nav ul li:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: var(--white-color);
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    color: var(--accent-color-dark);
+}
+
+/* === Section Styling === */
+.section-container {
+    width: 100%;
+    padding: 60px 20px;
+    text-align: center;
+    color: var(--text-color);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    margin-bottom: 20px;
+}
+
+/* === Section Header Styling === */
+.section-header {
+    font-size: var(--font-size-large);
+    font-weight: 500;
+    color: var(--accent-color);
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* === Input Group Styling === */
+.input-group {
+    max-width: 600px;
+    margin: 0 auto 25px;
+}
+
+.input-label {
+    font-size: var(--font-size-large);
+    color: var(--white-color);
+    margin-bottom: 15px;
+    display: block;
+}
+
+.input-field {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-radius: var(--border-radius);
+    background-color: rgba(255, 255, 255, 0.8);
+    color: var(--white-color);
+    font-size: var(--font-size-large);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.input-field:focus {
+    background-color: rgba(28, 30, 34, 0.9);
+    border-color: var(--accent-color);
+    outline: none;
+}
+
+.input-field::placeholder {
+    color: transparent;
+}
+
+/* === Button Styling === */
+button {
+    padding: 15px 30px;
+    font-size: var(--font-size-large);
+    background-color: var(--accent-color);
+    color: var(--primary-bg-color);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: var(--accent-color-dark);
+}

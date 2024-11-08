@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/frontpage.css') }}"
+    />
+    <title>Your Name - Portfolio</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">Your Name</div>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#resume">Resume</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h1>Welcome to My Portfolio</h1>
+        <p>I'm a passionate developer specializing in [your specialization].</p>
+      </section>
+
+      <section id="about" class="about">
+        <h2>About Me</h2>
+        <p>
+          Write a brief biography about yourself, your interests, and what
+          motivates you as a developer.
+        </p>
+        <h3>Skills</h3>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>[Other skills]</li>
+        </ul>
+      </section>
+
+      <section id="projects" class="projects">
+        <h2>My Projects</h2>
+        <ul>
+          <li>
+            <h3>Project Title 1</h3>
+            <p>A brief description of project 1.</p>
+            <a href="https://github.com/yourusername/project1">GitHub</a>
+          </li>
+          <li>
+            <h3>Project Title 2</h3>
+            <p>A brief description of project 2.</p>
+            <a href="https://github.com/yourusername/project2">GitHub</a>
+          </li>
+          <li>
+            <h3>Project Title 3</h3>
+            <p>A brief description of project 3.</p>
+            <a href="https://github.com/yourusername/project3">GitHub</a>
+          </li>
+        </ul>
+      </section>
+
+      <section id="blog" class="blog">
+        <h2>Blog</h2>
+        <p>
+          Share articles or insights about your coding journey. (You can add
+          links to your blog posts here.)
+        </p>
+      </section>
+
+      <section id="resume" class="resume">
+        <h2>Resume</h2>
+        <p>You can download my resume here:</p>
+        <a href="path/to/your/resume.pdf" class="cta-button">Download Resume</a>
+      </section>
+
+      <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <p>
+          Feel free to reach out via email:
+          <a href="mailto:youremail@example.com">youremail@example.com</a>
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Your Name</p>
+    </footer>
+  </body>
+</html>
